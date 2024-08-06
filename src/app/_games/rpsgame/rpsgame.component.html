@@ -1,1 +1,57 @@
-<p>rpsgame works!</p>
+<main class="bg-amber-500 w-screen h-screen flex justify-center items-center ">
+
+  <div class="w-auto h-auto rounded-xl bg-white ">
+
+    <div class="p-5 flex justify-center font-bold text-[1.6rem] w-[50rem] items-center border-b-2 border-b-amber-500" id="title">
+      بازی سنگ کاغذ قیچی
+    </div>
+    <div class="flex gap-[2rem] p-5 justify-between items-center">
+      <div class="flex flex-col gap-4 w-40">
+        <div class="font-bold text-[1.5rem] text-center">
+          انتخاب کنید
+        </div>
+        <button  (click)="select(1)" *ngIf="selected != 1" id="Rock" title="سنگ" class="cursor-pointer transition-all rounded-xl
+        ease-in duration-300 hover:bg-amber-200  hover:opacity-70"><img src="assets/Rock.png" alt="سنگ"></button>
+
+        <button [ngStyle]="{'background':selectColors[0]}" *ngIf="selected == 1" id="RockSelected" title="سنگ" class="cursor-pointer transition-all rounded-xl
+        ease-in duration-300 bg-amber-200  opacity-70"><img src="assets/Rock.png" alt="سنگ"></button>
+
+        <button  (click)="select(2)" *ngIf="selected != 2" id="Paper" title="کاغذ" class="cursor-pointer transition-all rounded-xl
+        ease-in duration-300 hover:bg-amber-200  hover:opacity-70"> <img src="assets/Paper.png" alt="کاغذ"></button>
+
+        <button [ngStyle]="{'background':selectColors[1]}" *ngIf="selected == 2" id="PaperSelected" title="کاغذ" class="cursor-pointer transition-all rounded-xl
+        ease-in duration-300 bg-amber-200  opacity-70"> <img src="assets/Paper.png" alt="کاغذ"></button>
+
+        <button (click)="select(3)" *ngIf="selected != 3" id="Scissors" title="قیچی" class="cursor-pointer transition-all rounded-xl
+        ease-in duration-300 hover:bg-amber-200  hover:opacity-70"><img src="assets/Scissors.png" alt="قیچی"></button>
+        <button  [ngStyle]="{'background':selectColors[2]}" *ngIf="selected == 3" id="ScissorsSelected" title="قیچی" class="cursor-pointer transition-all rounded-xl
+        ease-in duration-300 bg-amber-200 opacity-70"><img src="assets/Scissors.png" alt="قیچی"></button>
+      </div>
+
+      <div class="flex justify-center flex-col gap-10">
+
+        <h1 class="text-center text-[1.5rem] font-bold ">{{resultText}}</h1>
+        <button [disabled]="!selected" *ngIf="i == 0 && resultText == undefined" (click)="startGame()" class=" w-[10rem] rounded-xl bg-green-500 p-5 text-white font-bold transition-all ease-in duration-300 cursor-pointer
+        hover:bg-green-300 disabled:bg-gray-400 disabled:text-gray-700 disabled:cursor-not-allowed">شروع بازی</button>
+        <button  *ngIf="resultText != undefined" (click)="reloadGame()" class=" w-[10rem] rounded-xl bg-blue-500 p-5 text-white font-bold transition-all ease-in duration-300 cursor-pointer
+        hover:bg-blue-700 disabled:cursor-not-allowed">دوباره بازی کنیم</button>
+        <app-loader *ngIf="i != 0"></app-loader>
+
+      </div>
+
+      <div class="flex flex-col gap-4 w-40">
+        <div class="font-bold text-[1.5rem] text-center">
+          هوش مصنوعی
+        </div>
+        <button  title="سنگ" class="cursor-not-allowed transition-all rounded-xl
+        ease-in duration-300 opacity-70" [ngStyle]="{'background':gameColors[0]}" id="Rock-AI"><img src="assets/Rock.png" alt="سنگ"></button>
+        <button  title="کاغذ" class="cursor-not-allowed transition-all rounded-xl
+        ease-in duration-300 opacity-70" [ngStyle]="{'background':gameColors[1]}" id="Paper-AI"> <img src="assets/Paper.png" alt="کاغذ"></button>
+        <button  title="قیچی" class="cursor-not-allowed transition-all rounded-xl
+        ease-in duration-300 opacity-70" [ngStyle]="{'background':gameColors[2]}" id="Scissors-AI"><img src="assets/Scissors.png" alt="قیچی"></button>
+      </div>
+    </div>
+
+  </div>
+
+</main>
