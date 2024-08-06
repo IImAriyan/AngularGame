@@ -48,7 +48,7 @@ export class RPSgameComponent {
       ]
     }
     select(select:number) {
-      if (this.i == 0) {
+      if (this.resultText == undefined ) {
         this.selected = select;
       }
     }
