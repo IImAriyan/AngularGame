@@ -48,7 +48,9 @@ export class RPSgameComponent {
       ]
     }
     select(select:number) {
-      this.selected = select;
+      if (this.i == 0) {
+        this.selected = select;
+      }
     }
 
     startGame() {
@@ -57,7 +59,7 @@ export class RPSgameComponent {
       }else {
         const timer = setInterval(()=>{
           this.i = this.i +1;
-          if (this.i == 30) {
+          if (this.i == 25) {
             this.gameColors = ['transparent','transparent','transparent'];
             this.aiResultNumber = Math.floor(Math.random()*3);
             this.gameColors[this.aiResultNumber] = '#597ae5';
@@ -75,9 +77,9 @@ export class RPSgameComponent {
 
             }else if (this.selected == 3 && this.aiResultNumber == 1) {
 
-              this.gameColors[this.aiResultNumber] = '#00FF00';
-              this.selectColors[this.selected-1] = "#FF0000";
-              this.resultText = 'من بردم !';
+              this.gameColors[this.aiResultNumber] = '#FF0000';
+              this.selectColors[this.selected-1] = "#00FF00";
+              this.resultText = 'تو بردی !';
 
             }else if (this.selected == 1 && this.aiResultNumber == 2) {
 
@@ -85,7 +87,18 @@ export class RPSgameComponent {
               this.selectColors[this.selected-1] = "#00FF00";
               this.resultText = 'تو بردی !';
 
-            }else {
+            }else if (this.selected == 2 && this.aiResultNumber == 2) {
+              this.resultText = 'من بردم !';
+              this.gameColors[this.aiResultNumber] = '#00FF00';
+              this.selectColors[this.selected-1] = '#FF0000';
+
+            }else if (this.selected == 3 && this.aiResultNumber == 0) {
+              this.resultText = 'من بردم !';
+              this.gameColors[this.aiResultNumber] = '#00FF00';
+              this.selectColors[this.selected-1] = '#FF0000';
+
+            }
+            else {
               this.resultText = 'بازی مساوی شد';
               this.gameColors[this.aiResultNumber] = 'rgb(253 230 138 / 1)';
               this.selectColors[this.selected-1] = "rgb(253 230 138 / 1)";
