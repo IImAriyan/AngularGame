@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {NgIf, NgStyle} from "@angular/common";
 import Swal from "sweetalert2";
 import {LoaderComponent} from "../../_componenets/loader/loader.component";
+import {Title} from "@angular/platform-browser";
 @Component({
   selector: 'app-rpsgame',
   standalone: true,
@@ -27,6 +28,9 @@ export class RPSgameComponent {
     'rgb(253 230 138 / 1)','rgb(253 230 138 / 1)','rgb(253 230 138 / 1)'
     ]
     resultText: string | undefined;
+    constructor(private title: Title) {
+      this.title.setTitle('بازی سنگ کاغذ قیچی !')
+    }
     swalError(message:string) {
       Swal.fire({
         icon:'error',
@@ -48,7 +52,7 @@ export class RPSgameComponent {
       ]
     }
     select(select:number) {
-      if (this.resultText == undefined ) {
+      if (this.i == 0 && this.resultText == undefined) {
         this.selected = select;
       }
     }
