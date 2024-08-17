@@ -4,10 +4,14 @@
 @tailwind utilities;
 @layer base {
   @font-face {
-    font-family: 'vazir';
-    src: url("assets/Vazir.ttf") format('TrueType');
+    font-family: 'Yekan';
+    src: url("assets/auth/Yekan.woff") format('woff');
   }
   * {
-    font-family: 'vazir';
+    font-family: 'Yekan';
   }
+
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

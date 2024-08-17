@@ -1,7 +1,19 @@
-<header class="sticky top-0 w-[80%] rounded-xl  border-[1.4px] border-white  z-50 p-5 ">
-  <nav>خانه</nav>
-  <nav>بازی ها</nav>
-  <nav>درباره ما</nav>
-  <nav>ارتباط با ما</nav>
-  <nav>حساب کاربری</nav>
+<header class="  sticky top-0 w-[80vw] rounded-xl  border-[1.4px] border-gray-800 backdrop-blur-3xl  z-50 p-6 flex justify-between " dir="rtl">
+  <div class=" flex gap-2 font-black text-[1.5rem] text-white" dir="ltr">
+    <span class="text-yellow-400">RPS</span>
+    <h1>game</h1>
+  </div>
+  <nav class="flex gap-10" dir="rtl">
+    <button class="text-white font-normal" routerLink="/games">بازی ها</button>
+    <button class="text-white font-normal" routerLink="/about-us">درباره ما</button>
+    <button class="text-white font-normal" routerLink="/blog">وبلاگ</button>
+    <button class="text-white font-normal" routerLink="/shop">فروشگاه</button>
+    <button class="text-white font-normal" routerLink="/leaderboard">تابلوی امتیازات</button>
+  </nav>
+
+  <div class="flex">
+    <button routerLink="/authentication/login" class="text-gray-900 bg-[rgb(212,254,0)] z-10 p-2 px-5 text-[0.8rem] rounded-xl font-extrabold
+      shadow-[6px_2px_3rem_-5px_rgb(212,254,0)] cursor-pointer transition-all duration-100
+      hover:shadow-[0px_0px_0px_0px_rgb(212,254,0)] ">ورود / ثبت نام</button>
+  </div>
 </header>
