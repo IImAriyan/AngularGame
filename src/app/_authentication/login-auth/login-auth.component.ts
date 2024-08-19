@@ -4,6 +4,8 @@ import {MatIcon} from "@angular/material/icon";
 import {UserIconComponent} from "../../_componenets/user-icon/user-icon.component";
 import {RouterLink} from "@angular/router";
 import {NgIf} from "@angular/common";
+import {FormControl, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
+import {UserAPIService} from "../../_services/user-api.service";
 
 @Component({
   selector: 'app-login-auth',
@@ -13,16 +15,19 @@ import {NgIf} from "@angular/common";
     MatIcon,
     UserIconComponent,
     RouterLink,
-    NgIf
+    NgIf,
+    ReactiveFormsModule
   ],
   templateUrl: './login-auth.component.html',
   styleUrl: './login-auth.component.css'
 })
 export class LoginAuthComponent {
   isHover: boolean = false;
-
-
-
-  protected readonly alert = alert;
-  protected readonly console = console;
+  loginForm: FormGroup;
+  constructor(private userAPI : UserAPIService) {
+    this.loginForm = new FormGroup({
+      username: new FormControl("",[Validators.required,Validators.maxLength(20)]),
+      password: new FormControl("",[Validators.required,Validators.maxLength(20)]),
+    })
+  }
 }

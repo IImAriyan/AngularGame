@@ -7,8 +7,32 @@
     font-family: 'Yekan';
     src: url("assets/auth/Yekan.woff") format('woff');
   }
+
+  @font-face {
+    font-family: 'mc-font';
+    src: url("assets/auth/mc-font.ttf") format('truetype');
+  }
+
   * {
     font-family: 'Yekan';
+  }
+
+  body::-webkit-scrollbar {
+    width: 0.7rem;
+    background: rgb(31, 41 ,55);
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background: rgb(212,254,0);
+  }
+
+  .logo span{
+    font-family: 'mc-font';
+    font-size: 30px;
+  }
+  .logo h1{
+    font-family: 'mc-font';
+    font-size: 30px;
   }
 
 }

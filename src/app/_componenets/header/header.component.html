@@ -1,9 +1,10 @@
-<header class="  sticky top-0 w-[80vw] rounded-xl  border-[1.4px] border-gray-800 backdrop-blur-3xl  z-50 p-6 flex justify-between " dir="rtl">
-  <div class=" flex gap-2 font-black text-[1.5rem] text-white" dir="ltr">
-    <span class="text-yellow-400">RPS</span>
-    <h1>game</h1>
+<header class="  sticky top-0 w-[80vw] rounded-xl  border-[1.4px] border-[#292d39] backdrop-blur-[10px] items-center  z-50 p-6 flex
+justify-between bg-[rgba(55, 65, 81,1)]" dir="rtl">
+  <div class="logo flex gap-2 text-[1.5rem] text-white max-[768px]:text-[0.6rem]" dir="ltr">
+    <span class="text-[rgb(212,254,0)]">RPS</span>
+    <h1>GAME</h1>
   </div>
-  <nav class="flex gap-10" dir="rtl">
+  <nav  class="flex max-[768px]:hidden gap-10" dir="rtl">
     <button class="text-white font-normal" routerLink="/games">بازی ها</button>
     <button class="text-white font-normal" routerLink="/about-us">درباره ما</button>
     <button class="text-white font-normal" routerLink="/blog">وبلاگ</button>
@@ -11,9 +12,39 @@
     <button class="text-white font-normal" routerLink="/leaderboard">تابلوی امتیازات</button>
   </nav>
 
-  <div class="flex">
+  <div class="flex max-[768px]:hidden" >
     <button routerLink="/authentication/login" class="text-gray-900 bg-[rgb(212,254,0)] z-10 p-2 px-5 text-[0.8rem] rounded-xl font-extrabold
       shadow-[6px_2px_3rem_-5px_rgb(212,254,0)] cursor-pointer transition-all duration-100
       hover:shadow-[0px_0px_0px_0px_rgb(212,254,0)] ">ورود / ثبت نام</button>
   </div>
+  <div (click)="menuIsOpen = true" class="hidden max-[768px]:block text-white cursor-pointer" id="menu">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" viewBox="0 0 50 50" width="25px" height="25px"><path d="M 5 8 A 2.0002 2.0002 0 1 0 5 12 L 45 12 A 2.0002 2.0002 0 1 0 45 8 L 5 8 z M 5 23 A 2.0002 2.0002 0 1 0 5 27 L 45 27 A 2.0002 2.0002 0 1 0 45 23 L 5 23 z M 5 38 A 2.0002 2.0002 0 1 0 5 42 L 45 42 A 2.0002 2.0002 0 1 0 45 38 L 5 38 z"/></svg>
+  </div>
 </header>
+
+
+<aside *ngIf="menuIsOpen" class="absolute w-[70%] h-[120vh] transition-all duration-300 z-50 bg-gray-900 top-0 right-0
+flex flex-col gap-5 p-5">
+  <div class="logo flex gap-2 text-[1.5rem] flex justify-center text-white max-[768px]:text-[0.6rem]" dir="ltr">
+    <span class="text-[rgb(212,254,0)]">RPS</span>
+    <h1>GAME</h1>
+  </div>
+  <nav  class="flex flex-col gap-16 items-start" dir="rtl">
+    <button class="text-white font-normal transition-all duration-300  hover:text-[rgb(212,254,0)]" routerLink="/games">بازی ها</button>
+    <button class="text-white font-normal transition-all duration-300 hover:text-[rgb(212,254,0)]" routerLink="/about-us">درباره ما</button>
+    <button class="text-white font-normal transition-all duration-300  hover:text-[rgb(212,254,0)]" routerLink="/blog">وبلاگ</button>
+    <button class="text-white font-normal transition-all duration-300  hover:text-[rgb(212,254,0)]" routerLink="/shop">فروشگاه</button>
+    <button class="text-white font-normal transition-all duration-300  hover:text-[rgb(212,254,0)]" routerLink="/leaderboard">تابلوی امتیازات</button>
+  </nav>
+
+  <div class="flex " >
+    <button routerLink="/authentication/login" class="text-gray-900 bg-[rgb(212,254,0)] z-10 p-2 px-5 text-[0.8rem] rounded-xl font-extrabold
+      shadow-[6px_2px_3rem_-5px_rgb(212,254,0)] cursor-pointer transition-all duration-100
+      hover:shadow-[0px_0px_0px_0px_rgb(212,254,0)] mt-10 m-auto">ورود / ثبت نام</button>
+  </div>
+</aside>
+
+<div *ngIf="menuIsOpen" (click)="menuIsOpen = false" class="absolute w-[30%] h-[120vh] z-50 bg-gray-900 top-0 left-0 gap-5 p-5 opacity-65  bg-gray-900">
+
+</div>
+
