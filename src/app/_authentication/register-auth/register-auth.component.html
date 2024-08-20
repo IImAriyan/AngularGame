@@ -16,28 +16,32 @@
         <div class="grid grid-cols-2 gap-x-2.5 gap-y-4 max-[768px]:flex max-[768px]:flex-col max-[768px]:10gap;" [formGroup]="registerForm">
           <div class="flex flex-col gap-3">
             <label for="username">نام کاربری</label>
-            <input formControlName="username" id="username" class="w-[22rem] z-10 p-3 rounded-xl bg-gray-800 transition-all outline-none
+            <input [ngStyle]="{'border-color':borderColors[0]}" formControlName="username" id="username" class="w-[22rem] z-10 p-3 rounded-xl bg-gray-800 transition-all outline-none
         duration-300 ease-in ring-0 border-[1px] border-gray-700 focus:border-[rgb(212,254,0)]" type="text" placeholder="نام کاربری خود را وارد کنید">
+            <span *ngIf="usernameError" class="text-rose-500 text-[0.7rem] font-bold text-right">{{usernameError}}</span>
           </div>
-
-
-
           <div class="flex flex-col gap-3">
             <label for="password">گذرواژه</label>
-            <input formControlName="password" id="password" class="w-[22rem] z-10 p-3 rounded-xl bg-gray-800 transition-all outline-none
+            <input [ngStyle]="{'border-color':borderColors[2]}"  formControlName="password" id="password" class="w-[22rem] z-10 p-3 rounded-xl bg-gray-800 transition-all outline-none
         duration-300 ease-in ring-0 border-[1px] border-gray-700 focus:border-[rgb(212,254,0)]" type="text" placeholder="گذرواژه خود را وارد کنید">
+            <span *ngIf="passwordError" class="text-rose-500 text-[0.7rem] font-bold text-right">{{passwordError}}
+          </span>
           </div>
 
           <div class="flex flex-col gap-3">
             <label for="email">ایمیل</label>
-            <input formControlName="email" id="email" class="w-[22rem] z-10 p-3 rounded-xl bg-gray-800 transition-all outline-none
+            <input [ngStyle]="{'border-color':borderColors[1]}"  formControlName="email" id="email" class="w-[22rem] z-10 p-3 rounded-xl bg-gray-800 transition-all outline-none
         duration-300 ease-in ring-0 border-[1px] border-gray-700 focus:border-[rgb(212,254,0)]" type="text" placeholder="ایمیل خود را وارد کنید">
+            <span *ngIf="emailError" class="text-rose-500 text-[0.7rem] font-bold text-right">{{emailError}}
+          </span>
           </div>
 
           <div class="flex flex-col gap-3">
             <label for="passwordC">تایید گذرواژه</label>
-            <input formControlName="passwordConfirm" id="passwordC" class="w-[22rem] z-10 p-3 rounded-xl bg-gray-800 transition-all outline-none
+            <input [ngStyle]="{'border-color':borderColors[3]}" formControlName="passwordConfirm" id="passwordC" class="w-[22rem] z-10 p-3 rounded-xl bg-gray-800 transition-all outline-none
         duration-300 ease-in ring-0 border-[1px] border-gray-700 focus:border-[rgb(212,254,0)]" type="text" placeholder="گذرواژه خود را تایید کنید">
+            <span *ngIf="passwordConfirmError" class="text-rose-500 text-[0.7rem] font-bold text-right">{{passwordConfirmError}}
+          </span>
           </div>
         </div>
 
@@ -70,7 +74,7 @@
         </div>
 
         <div class="flex justify-center flex-col gap-6">
-          <button [disabled]="!registerForm.valid"  class="w-1/2 text-gray-900 bg-[rgb(212,254,0)] z-10 p-3  px-5  rounded-xl  font-extrabold
+          <button (click)="register()" [disabled]="!registerForm.valid"  class="w-1/2 text-gray-900 bg-[rgb(212,254,0)] z-10 p-3  px-5  rounded-xl  font-extrabold
       shadow-[6px_2px_2rem_-5px_rgb(212,254,0)] m-auto cursor-pointer transition-all duration-100
       hover:shadow-[0px_0px_0px_0px_rgb(212,254,0)] text-[0.9rem] disabled:bg-gray-800 disabled:shadow-[0px_0px_0px_0px_rgb(212,254,0)]
       disabled:text-gray-900 disabled:cursor-not-allowed">ایجاد به حساب کاربری</button>

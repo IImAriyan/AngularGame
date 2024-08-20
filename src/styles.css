@@ -26,6 +26,10 @@
     background: rgb(212,254,0);
   }
 
+  .swal-container {
+    font-family: 'Yekan';
+  }
+
   .logo span{
     font-family: 'mc-font';
     font-size: 30px;
@@ -36,6 +40,8 @@
   }
 
 }
+
+
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
