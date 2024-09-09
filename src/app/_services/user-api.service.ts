@@ -18,7 +18,16 @@ export class UserAPIService {
   addUsers(user : User) : Observable<User> {
     return this.http.post<User>(this.apiLink+"users/add",
       {"username":user.username,"password":user.password
-       ,     "email":user.email, "adminRole":user.adminRole})
+       ,     "email":user.email, "adminRole":user.adminRole,
+        "firstName": "string",
+        "lastName": "string",
+        "age": "string",
+        "telephone": "string",
+        "nationalCode": "string",
+        "gender": "string",
+        "accountLocked": "string",
+        "coins": "string",
+        "accountBanned": "string"})
   }
 
 }

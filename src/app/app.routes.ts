@@ -5,6 +5,8 @@ import {LoginAuthComponent} from "./_authentication/login-auth/login-auth.compon
 import {authGuard} from "./_guards/auth.guard";
 import {RegisterAuthComponent} from "./_authentication/register-auth/register-auth.component";
 import {DashboardComponent} from "./_pages/dashboard/dashboard.component";
+import {NotFoundComponent} from "./_componenets/not-found/not-found.component";
+
 
 
 export const routes: Routes = [
@@ -29,6 +31,8 @@ export const routes: Routes = [
   },
 
 
+
+
   // End Games
   {
     path:"authentication/login",
@@ -44,6 +48,11 @@ export const routes: Routes = [
     path:'dashboard',
     component: DashboardComponent,
     canActivate:[authGuard]
+  },
+
+  {
+    path:'**',
+    component:NotFoundComponent,
   }
 
 ];

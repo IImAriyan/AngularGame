@@ -7,7 +7,6 @@ import {NgIf, NgStyle} from "@angular/common";
 import {FormControl, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
 import {UserAPIService} from "../../_services/user-api.service";
 import {User} from "../../_models/user.model";
-import Swal from "sweetalert2";
 
 @Component({
   selector: 'app-login-auth',
@@ -83,18 +82,11 @@ export class LoginAuthComponent {
             if (this.users$[i].password == password) {
 
               // Login Users
-              sessionStorage.key(1);
-              sessionStorage.setItem("$@):userIDWhatiSIS?",""+this.users$[i].id);
+              localStorage.key(1);
+              localStorage.setItem("$@):userIDWhatiSIS?",""+this.users$[i].id);
 
 
               // sweetalert Success Message \\
-
-              Swal.fire({
-                icon: "success",
-                text: "شما با موفقیت وارد شدید!",
-                confirmButtonText:"باشه"
-              })
-
 
               this.router.navigate(['/dashboard']);
 

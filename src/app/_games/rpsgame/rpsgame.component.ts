@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {NgIf, NgStyle} from "@angular/common";
-import Swal from "sweetalert2";
+
 import {LoaderComponent} from "../../_componenets/loader/loader.component";
 import {Title} from "@angular/platform-browser";
 
@@ -36,13 +36,7 @@ export class RPSgameComponent {
     this.title.setTitle('بازی سنگ کاغذ قیچی !')
   }
 
-  private swalError(message: string): void {
-    Swal.fire({
-      icon: 'error',
-      text: message,
-      confirmButtonText: 'باشه',
-    })
-  }
+
 
   reloadGame() {
     this.i = 0;
@@ -64,7 +58,7 @@ export class RPSgameComponent {
   }
   startGame() {
     if (this.selected == 0) {
-      this.swalError('!! شما باید یک مقدار را انتخاب کنید')
+
     } else {
       const timer = setInterval(() => {
         this.i = this.i + 1;
