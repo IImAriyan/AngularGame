@@ -37,16 +37,15 @@ flex flex-col gap-5 p-5">
     <button class="text-white font-normal transition-all duration-300 hover:text-[rgb(212,254,0)]" routerLink="/about-us">درباره ما</button>
     <button class="text-white font-normal transition-all duration-300  hover:text-[rgb(212,254,0)]" routerLink="/blog">وبلاگ</button>
     <button class="text-white font-normal transition-all duration-300  hover:text-[rgb(212,254,0)]" routerLink="/shop">فروشگاه</button>
-    <button class="text-white font-normal transition-all duration-300  hover:text-[rgb(212,254,0)]" routerLink="/leaderboard">تابلوی امتیازات</button>
+    <button  class="text-white font-normal transition-all duration-300  hover:text-[rgb(212,254,0)]" routerLink="/leaderboard">تابلوی امتیازات</button>
   </nav>
 
   <div class="flex " >
-    <button routerLink="/authentication/login" class="text-gray-900 bg-[rgb(212,254,0)] z-10 p-2 px-5 text-[0.8rem] rounded-xl font-extrabold
+    <button routerLink="/authentication/login"  class="text-gray-900 bg-[rgb(212,254,0)] z-10 p-2 px-5 text-[0.8rem] rounded-xl font-extrabold
       shadow-[6px_2px_3rem_-5px_rgb(212,254,0)] cursor-pointer transition-all duration-100
       hover:shadow-[0px_0px_0px_0px_rgb(212,254,0)] mt-10 m-auto">ورود / ثبت نام</button>
   </div>
 </aside>
-
 <div *ngIf="menuIsOpen" (click)="menuIsOpen = false" class="absolute w-[30%] h-[120vh] z-50 bg-gray-900 top-0 left-0 gap-5 p-5 opacity-65  bg-gray-900">
 
 </div>

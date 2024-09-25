@@ -28,6 +28,7 @@ export class HomeComponent {
 
   constructor() {
     this.onlinePlayers = this.randomNumber(3460,3480)
+
     setInterval(()=>{
       this.onlinePlayers = this.randomNumber(3460,3480)
     },1500)

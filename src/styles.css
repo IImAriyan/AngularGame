@@ -30,12 +30,30 @@
     background: linear-gradient(to right bottom,rgb(24 27 36),transparent);
     padding: 12px 22px;
     font-family: 'poppins','Yekan',sans-serif;
+    --webkit-backdrop-filter: blur(10px);
   }
   .logo{
     font-family: 'mc-font';
     font-size: 30px;
   }
+  .it-img {
+    transition: all 0.3s;
+  }
 
+
+  .it-parent {
+    transition: all 0.3s;
+  }
+
+  .it:hover .it-parent {
+    padding: 0;
+  }
+
+  .it:hover .it-img {
+    border-radius: 1.5rem;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
   .online-badge::before {
     content: "";
     position: absolute;
