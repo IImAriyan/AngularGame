@@ -66,6 +66,16 @@
     animation: animatePlus 2s infinite;
   }
 
+  .not-found-loader {
+    animation: spin 2s infinite;
+  }
+
+
+  @keyframes spin {
+    to { transform: rotate(0deg); }
+    from { transform: rotate(360deg); }
+  }
+
   @keyframes animatePlus {
     0%{
       transform: scale(1);

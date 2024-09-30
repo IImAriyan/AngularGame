@@ -1,0 +1,48 @@
+                                    <!--Not Found Component-->
+<app-not-found class="absolute w-full h-full top-0 left-0" *ngIf="!isFinded"></app-not-found>
+
+                                    <!--Not Found Component-->
+<div class="absolute p-2 w-full flex justify-center items-center">
+  <app-header ></app-header>
+</div>
+
+<main class="w-full h-screen">
+
+  <div class="w-full h-full ">
+      <div class="w-full h-[55%] relative">
+        <img class="w-full h-full bg-cover object-cover" [src]="post?.image" alt="{{post?.title}}">
+        <div class="p-3 pt-44 flex flex-col items-center justify-start bg-gradient-to-t from-[rgba(19,21,29,1)] via-[rgba(31,41,55,0.9)] via-[rgba(31,41,55,0.7)]  to-[rgba(31,41,55,0.6)] w-full h-full absolute bottom-0 ">
+
+          <div class="text-[1rem] text-gray-400 gap-2 flex items-center max-[768px]:text-[0.8rem]" dir="rtl">
+            <h1 class="cursor-pointer duration-300 transition-all hover:text-white "
+            [routerLink]="['/home']">صفحه اصلی</h1>
+            <span class="mx-5 max-[768px]:mx-2"> > </span>
+            <h1  class="cursor-pointer duration-300 transition-all hover:text-white"
+            [routerLink]="['/blogs']"> بلاگ ها </h1>
+            <span class="mx-5 max-[768px]:mx-2"> > </span>
+            <h1 class="text-white font-bold text-[1.1rem] cursor-pointer max-[768px]:text-[0.8rem]"
+            [routerLink]="['/blogs/'+post?.routePath]">{{post?.title}}</h1>
+          </div>
+          <div class="text-white text-[2rem] font-bold mt-3 max-[768px]:text-[1.6rem]">
+            {{post?.title}}
+          </div>
+
+          <div class="text-gray-400 text-xl w-2/5 justify-center flex text-center
+            max-[768px]:w-full max-[768px]:text-[1rem]">
+            {{post?.titleDescription}}
+          </div>
+
+        </div>
+      </div>
+      <div class="w-full h-full bg-[rgb(19,21,29)] flex ">
+
+      </div>
+
+  </div>
+
+
+
+</main>
+
+
+

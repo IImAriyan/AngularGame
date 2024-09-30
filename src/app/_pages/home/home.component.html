@@ -2,14 +2,14 @@
   <app-header></app-header>
 </div>
 
-<main  class="w-full h-screen absolute top-0 ">
+<main  class="w-full h-screen absolute top-0 select-none">
 
     <section class="z-[-2] home-landing bg-[url('assets/home/bg.png')] text-center h-screen bg-cover flex-col flex gap-4 justify-center items-center w-full">
-      <div class="absolute  w-full h-[100vh] z-[1] opacity-80  bg-gray-900 ">
+      <div class="absolute  w-full h-[100vh] z-[1] opacity-80  bg-gray-900 max-[768px]:h-full">
 
       </div>
 
-      <div class="flex justify-center items-center z-[2] text-white gap-5 font-bold text-[2rem] rounded-[5rem] p-3
+      <div class="flex justify-center items-center z-[2] text-white gap-5 font-bold text-[2rem] max-[768px]:text-[1rem] rounded-[5rem] p-3
        bg-gradient-to-r from-transparent via-[rgba(212,254,0,0.1)] to-[rgba(212,254,0,0.4)] ">
         <h1>برترین سایت گیم ایران</h1>
         <svg width="34" height="34" class="align-middle transition-all duration-[800ms]
@@ -26,11 +26,11 @@
 
       <div class="flex gap-3 z-[2]">
         <div class="flex item text-[18px] text-white justify-center items-center gap-2 backdrop-blur-[20px] bg-[rgba(55, 65, 81,1)]
-        border-[1.4px] border-[#292d39] rounded-xl" [dir]="'rtl'">
+        border-[1.4px] border-[#292d39] rounded-xl max-[768px]:text-[13px]" [dir]="'rtl'">
           <h1>rps.multiplaygame.ir</h1>
         </div>
         <div class="flex item text-[18px] text-white justify-center items-center gap-2 backdrop-blur-[20px] bg-[rgba(55, 65, 81,1)]
-        border-[1.4px] border-[#292d39] rounded-xl" [dir]="'rtl'">
+        border-[1.4px] border-[#292d39] rounded-xl max-[768px]:text-[13px]" [dir]="'rtl'">
           <span class="online-badge w-[6px] h-[6px] rounded-[50%] bg-[rgb(255,58,58)] relative transition-all duration-[0.3s] ml-2.5"></span>
           <h1 [class.text-red-500]="onlinePlayers > 3470">{{onlinePlayers}}</h1>
           <h1>بازیکن آنلاین</h1>
@@ -41,18 +41,18 @@
 
       <div class="flex gap-3">
         <button  routerLink="/games" class="text-gray-900 bg-white z-10 p-4 px-10 text-[1rem] rounded-xl font-extrabold
-       cursor-pointer transition-all duration-100
+       cursor-pointer transition-all duration-100 max-[768px]:text-[0.8rem] max-[768px]:p-3 max-[768px]:px-5
        ">آموزش های بازی ها</button>
         <button  routerLink="/games" class="text-gray-900 bg-[rgb(212,254,0)] z-10 p-4 px-7 text-[1rem] rounded-xl font-extrabold
       shadow-[6px_2px_3rem_-5px_rgb(212,254,0)] cursor-pointer transition-all duration-100
-      hover:shadow-[0px_0px_0px_0px_rgb(212,254,0)] ">دیدن بازی ها</button>
+      hover:shadow-[0px_0px_0px_0px_rgb(212,254,0)] max-[768px]:text-[0.8rem] max-[768px]:p-3 ">دیدن بازی ها</button>
       </div>
 
     </section>
 
-    <section class="bg-gray-900 w-full h-[100vh]">
-      <div class="w-full justify-center items-center flex p-10">
-        <div class="flex justify-center  items-center z-[2] text-white gap-5 font-bold text-[1.8rem] rounded-[5rem] p-3
+    <section class="bg-gray-900 w-full h-full max-[768px]:h-auto ">
+      <div class="w-full justify-center items-center flex p-10 ">
+        <div class="flex justify-center  items-center z-[2] text-white gap-5 max-[768px]:gap-3 max-[768px]:text-[1rem]  font-bold text-[1.8rem] rounded-[5rem] p-3
        bg-gradient-to-r from-transparent via-[rgba(99,102 ,241,0.3)] to-[rgba(99,102,241,0.5)] ">
           <h1>برترین بازی های ایران گیمینیگ</h1>
           <svg width="34" height="34" class="align-middle transition-all duration-[800ms]
@@ -60,42 +60,39 @@
         </div>
       </div>
 
-      <div class="grid grid-cols-3 p-5 gap-x-5 w-[90%] m-auto" >
-
-        <div class="it border-[1.4px] border-gray-700 bg-gray-800 rounded-3xl ">
-
-          <div class="w-full p-2 it-parent">
-            <img src="assets/home/posts/minecraft.png" class="rounded-xl it-img" alt="minecraft">
-          </div>
-          <div class="w-full p-4 pb-0 text-white flex justify-end items-center text-[1.5rem] font-bold">
-            <h1 id="title">ماینکرفت</h1>
-          </div>
-          <div dir="rtl" class="w-full p-3 text-gray-400 flex justify-end items-center text-[0.9rem] font-bold">
-            <p>
-              ماینکرفت یک گیم تفریحی است برای گذارندن وقت خود در بازی های انلاین که میتوانید در ان خانه بسازید و به بقا کردن به پردازید با دوستان خود و خانه های خود را بسازید و به پادشاهی در بازی مشغول شوید.
-            </p>
-          </div>
-
-          <div class="flex justify-between items-center w-full" dir="rtl">
-            <div class="text-white font-semibold  text-right p-3 flex items-center gap-2">
-              <p> ادامه مطلب </p>
-              <svg xmlns="http://www.w3.org/2000/svg"    width="14" height="14" viewBox="0 0 24 24" fill="none"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5" d="M15 19.92L8.48 13.4c-.77-.77-.77-2.03 0-2.8L15 4.08"></path></svg>
+      <div class="grid grid-cols-3 p-5 gap-x-5 w-[90%]  m-auto max-[768px]:grid-cols-1 max-[768px]:gap-y-5 max-[768px]:w-full" >
+        @for (post of posts;track post) {
+          <div class="it border-[1.4px] border-gray-700 bg-gray-800 rounded-3xl ">
+            <div class="w-full p-2 it-parent">
+              <img src="{{ post.image }}" class="rounded-xl it-img" alt="minecraft">
             </div>
-            <div class="flex">
-              <div class="p-3  fill-[rgb(130,139,201)] flex text-gray-400 gap-1 align-middle items-center text-[0.8rem]">
-                <p class="align-middle">192</p>
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="align-middle" viewBox="0 0 24 24" ><path opacity=".4" d="M21.65 10.03c-.39-.56-1.08-.88-1.87-.88h-4.1c-.27 0-.52-.11-.69-.31-.18-.2-.25-.48-.21-.77l.51-3.28c.22-.98-.43-2.08-1.41-2.41-.91-.34-1.98.12-2.41.77L7.25 9.42l-.12.2v8.84l.15.15 3.17 2.45c.42.42 1.37.65 2.04.65h3.9c1.34 0 2.69-1.01 2.99-2.24l2.46-7.49c.26-.71.19-1.4-.19-1.95Z" ></path><path d="M5.21 6.379H4.18c-1.55 0-2.18.6-2.18 2.08v10.06c0 1.48.63 2.08 2.18 2.08h1.03c1.55 0 2.18-.6 2.18-2.08V8.459c0-1.48-.63-2.08-2.18-2.08Z"></path></svg>
+            <div class="w-full p-4 pb-0 text-white flex justify-end items-center text-[1.5rem] font-bold">
+              <h1 id="title">{{ post.title }}</h1>
+            </div>
+            <div dir="rtl" class="w-full p-3 text-gray-400 flex justify-end items-center text-[0.9rem] font-bold">
+              <p>
+                {{post.description}}
+              </p>
+            </div>
+
+            <div class="flex justify-between items-center w-full" dir="rtl">
+              <div [routerLink]="['/blogs/'+post.routePath]" class="text-white font-semibold  text-right p-3 flex items-center gap-2">
+                <p> ادامه مطلب </p>
+                <svg xmlns="http://www.w3.org/2000/svg"    width="14" height="14" viewBox="0 0 24 24" fill="none"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5" d="M15 19.92L8.48 13.4c-.77-.77-.77-2.03 0-2.8L15 4.08"></path></svg>
               </div>
-              <div class="p-3  fill-[rgb(130,139,201)] flex text-gray-400 gap-1 align-middle items-center text-[0.8rem]">
-                <p class="align-middle">119</p>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" ><path opacity=".4" d="m18.47 16.83.39 3.16c.1.83-.79 1.41-1.5.98l-4.19-2.49c-.46 0-.91-.03-1.35-.09A4.86 4.86 0 0 0 13 15.23c0-2.84-2.46-5.14-5.5-5.14-1.16 0-2.23.33-3.12.91-.03-.25-.04-.5-.04-.76C4.34 5.69 8.29 2 13.17 2S22 5.69 22 10.24c0 2.7-1.39 5.09-3.53 6.59Z" fill="currentColor"></path><path d="M13 15.23c0 1.19-.44 2.29-1.18 3.16-.99 1.2-2.56 1.97-4.32 1.97l-2.61 1.55c-.44.27-1-.1-.94-.61l.25-1.97C2.86 18.4 2 16.91 2 15.23c0-1.76.94-3.31 2.38-4.23.89-.58 1.96-.91 3.12-.91 3.04 0 5.5 2.3 5.5 5.14Z" fill="currentColor"></path></svg>
+              <div class="flex">
+                <div class="p-3  fill-[rgb(130,139,201)] flex text-gray-400 gap-1 align-middle items-center text-[0.8rem]">
+                  <p class="align-middle">{{ post.likes }}</p>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="align-middle" viewBox="0 0 24 24" ><path opacity=".4" d="M21.65 10.03c-.39-.56-1.08-.88-1.87-.88h-4.1c-.27 0-.52-.11-.69-.31-.18-.2-.25-.48-.21-.77l.51-3.28c.22-.98-.43-2.08-1.41-2.41-.91-.34-1.98.12-2.41.77L7.25 9.42l-.12.2v8.84l.15.15 3.17 2.45c.42.42 1.37.65 2.04.65h3.9c1.34 0 2.69-1.01 2.99-2.24l2.46-7.49c.26-.71.19-1.4-.19-1.95Z" ></path><path d="M5.21 6.379H4.18c-1.55 0-2.18.6-2.18 2.08v10.06c0 1.48.63 2.08 2.18 2.08h1.03c1.55 0 2.18-.6 2.18-2.08V8.459c0-1.48-.63-2.08-2.18-2.08Z"></path></svg>
+                </div>
+                <div class="p-3  fill-[rgb(130,139,201)] flex text-gray-400 gap-1 align-middle items-center text-[0.8rem]">
+                  <p class="align-middle">{{ post.comments }}</p>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" ><path opacity=".4" d="m18.47 16.83.39 3.16c.1.83-.79 1.41-1.5.98l-4.19-2.49c-.46 0-.91-.03-1.35-.09A4.86 4.86 0 0 0 13 15.23c0-2.84-2.46-5.14-5.5-5.14-1.16 0-2.23.33-3.12.91-.03-.25-.04-.5-.04-.76C4.34 5.69 8.29 2 13.17 2S22 5.69 22 10.24c0 2.7-1.39 5.09-3.53 6.59Z" fill="currentColor"></path><path d="M13 15.23c0 1.19-.44 2.29-1.18 3.16-.99 1.2-2.56 1.97-4.32 1.97l-2.61 1.55c-.44.27-1-.1-.94-.61l.25-1.97C2.86 18.4 2 16.91 2 15.23c0-1.76.94-3.31 2.38-4.23.89-.58 1.96-.91 3.12-.91 3.04 0 5.5 2.3 5.5 5.14Z" fill="currentColor"></path></svg>
+                </div>
               </div>
             </div>
           </div>
-
-
-
-        </div>
+        }
 
       </div>
     </section>

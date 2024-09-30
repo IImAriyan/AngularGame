@@ -6,6 +6,7 @@ import {authGuard} from "./_guards/auth.guard";
 import {RegisterAuthComponent} from "./_authentication/register-auth/register-auth.component";
 import {DashboardComponent} from "./_pages/dashboard/dashboard.component";
 import {NotFoundComponent} from "./_componenets/not-found/not-found.component";
+import {PostComponent} from "./_pages/post/post.component";
 
 
 
@@ -18,20 +19,20 @@ export const routes: Routes = [
 
   {
     path:"home",
-    component : HomeComponent
+    component : HomeComponent,
+  },
+
+  {
+    path:'blogs/:id',
+    component:PostComponent
   },
 
   // Games
-
-
   {
     path:"home/games/RPSgame",
     component:RPSgameComponent,
     canActivate:[authGuard]
   },
-
-
-
 
   // End Games
   {
